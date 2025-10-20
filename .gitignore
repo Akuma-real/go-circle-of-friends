@@ -1,0 +1,60 @@
+## Binaries
+cof
+cof.exe
+*.exe
+*.dll
+*.so
+*.dylib
+
+## Local config (use *.example.yaml for repo)
+settings.yaml
+rules.yaml
+*.local.yaml
+*.dev.yaml
+*.override.yaml
+
+## Env & secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+## Data outputs
+data.json
+*.db
+*.sqlite
+*.sqlite3
+
+## Go build artifacts
+bin/
+dist/
+build/
+tmp/
+*.test
+debug.test
+*.out
+.gocache/
+.gomodcache/
+.gocache
+go.work
+go.work.sum
+
+## Coverage & profiling
+coverage.*
+*.cover
+*.coverprofile
+coverage.out
+*.prof
+*.pprof
+profile.out
+
+## Logs
+*.log
+
+## IDE/OS
+.vscode/
+.idea/
+.fleet/
+.DS_Store
+Thumbs.db

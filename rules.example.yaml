@@ -1,0 +1,24 @@
+# 示例规则文件（复制为 rules.yaml 后再按需调整）
+# - 可以为不同主题定义解析预设（default/clarity 等）
+# - friends_page：用于从友链页抽取 name/link/avatar
+# - post_page：已移除，当前通过订阅抓取文章
+
+default:
+  # 通用主题预设（常见列表/卡片式结构）
+  friends_page:
+    # 友链项容器选择器（逗号分隔多个候选）
+    item: "ul.links li, li.friend-item, .friend-list li, a.friend, a.friend-link, a.flink-item"
+    # 名称选择器：按 "||" 顺序回退，"." 表示当前项文本
+    name: ".flink-item-name||.friend-name||.name||.title||.card-title||.info .name||."
+    # 链接选择器：支持 a@href 或当前项 @href
+    link: "a@href||@href"
+    # 头像选择器：优先 img@src
+    avatar: "img@src||.avatar@src"
+
+clarity:
+  # Clarity 主题预设（示例）
+  friends_page:
+    item: "menu.feed-list a.feed-card"
+    name: "span:not(.title)||.avatar img@alt||.title||."
+    link: "@href"
+    avatar: ".avatar img@src"
