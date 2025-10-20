@@ -23,9 +23,9 @@ jobs:
 
       - name: Run unit tests (with coverage)
         env:
-          GOCACHE: .gocache
+          GOCACHE: ${{ github.workspace }}/.gocache
         run: |
-          mkdir -p .gocache
+          mkdir -p "$GOCACHE"
           go test -coverpkg=./... ./tests -count=1 -race -coverprofile=coverage.out -v
 
       - name: Upload coverage
@@ -33,4 +33,3 @@ jobs:
         with:
           name: coverage
           path: coverage.out
-
