@@ -7,8 +7,6 @@ cof.exe
 *.dylib
 
 ## Local config (use *.example.yaml for repo)
-settings.yaml
-rules.yaml
 *.local.yaml
 *.dev.yaml
 *.override.yaml

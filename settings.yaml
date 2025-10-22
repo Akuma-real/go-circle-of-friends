@@ -1,0 +1,32 @@
+# 示例配置（可根据需要修改）
+# - LINK：友链页来源（按 rules.yaml 的选择器抽取）
+# - SETTINGS_FRIENDS_LINKS：静态补充（可选），支持自定义 feed_suffix
+# - SIMPLE_MODE：启用后导出 data.json（极简模式）
+# - LOG_*：控制日志级别/格式/语言/颜色
+LINK:
+  - type: page          # 友链页来源（按 rules.yaml 的选择器抽取）
+    url: https://blog.june.ink/link
+    theme: clarity
+
+SETTINGS_FRIENDS_LINKS:
+
+MAX_POSTS_NUM: 0          # 每个朋友最多抓取文章数（0 表示不限制）
+OUTDATE_CLEAN: 90          # 过期清理天数
+SIMPLE_MODE: false          # 是否启用极简导出
+RESET_ON_START: true       # 正常模式：清空 DB 表并删导出；极简模式：仅删除导出 JSON
+
+DATABASE:
+  type: sqlite
+  dsn: ./data.db
+
+CONCURRENCY:
+  fetch: 8
+  retry: 2
+
+PROXY:
+  http: ""               # 如 http://127.0.0.1:7890
+  https: ""
+LOG_LEVEL: info          # debug|info|warn|error|none
+LOG_FORMAT: pretty       # text|json|pretty
+LOG_LOCALE: zh-CN        # zh-CN|en
+LOG_COLOR: auto          # auto|always|never

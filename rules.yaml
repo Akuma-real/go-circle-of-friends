@@ -1,8 +1,3 @@
-# 示例规则文件（复制为 rules.yaml 后再按需调整）
-# - 可以为不同主题定义解析预设（default/clarity 等）
-# - friends_page：用于从友链页抽取 name/link/avatar
-# - post_page：已移除，当前通过订阅抓取文章
-
 default:
   # 通用主题预设（常见列表/卡片式结构）
   friends_page:
@@ -16,7 +11,7 @@ default:
     avatar: "img@src||.avatar@src"
 
 clarity:
-  # Clarity 主题预设（示例）
+  # Clarity 主题预设（适配 https://blog.june.ink/link）
   friends_page:
     item: "menu.feed-list a.feed-card"
     name: "span:not(.title)||.avatar img@alt||.title||."
