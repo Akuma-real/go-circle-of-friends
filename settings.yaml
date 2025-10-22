@@ -12,7 +12,7 @@ SETTINGS_FRIENDS_LINKS:
 
 MAX_POSTS_NUM: 0          # 每个朋友最多抓取文章数（0 表示不限制）
 OUTDATE_CLEAN: 90          # 过期清理天数
-SIMPLE_MODE: false          # 是否启用极简导出
+SIMPLE_MODE: true          # 是否启用极简导出
 RESET_ON_START: true       # 正常模式：清空 DB 表并删导出；极简模式：仅删除导出 JSON
 
 DATABASE:
